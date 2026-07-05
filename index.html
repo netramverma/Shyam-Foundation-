@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Apps Script App</title>
+    <!-- Manifest file ko connect karna -->
+    <link rel="manifest" href="manifest.json">
+    <style>
+        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+        iframe { border: none; width: 100%; height: 100%; }
+    </style>
+</head>
+<body>
+    <!-- Yahan aap apna Google Apps Script Web App URL dalenge -->
+    <iframe src="https://script.google.com/macros/s/AKfycbzPouICmSwkPwnrx9a3iKtklAci_-9hXHJq9bwLxjfmz44sNm_9jGlG6z_1dmXvM4x6/exec"></iframe>
+
+    <script>
+        // Service Worker ko register karna (PWA ke liye zaroori hai)
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+</body>
+</html>
